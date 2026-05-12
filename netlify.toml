@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[functions."update-prices"]
+  schedule = "0 14 * * *"
