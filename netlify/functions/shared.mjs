@@ -1,8 +1,5 @@
-import { getStore } from "@netlify/blobs";
 import { STOCKS } from "./stocks.mjs";
 
-const STORE_NAME = "saudi-investment-analyzer";
-const PRICE_KEY = "latest-prices";
 const TIME_ZONE = "Asia/Riyadh";
 
 export function jsonResponse(body, status = 200) {
@@ -37,19 +34,7 @@ export function getKsaTimestamp(date = new Date()) {
 }
 
 export function shouldRefreshAfterFiveKSA(payload) {
-  const now = new Date();
-
-  const hourKsa = Number(
-    new Intl.DateTimeFormat("en-US", {
-      timeZone: TIME_ZONE,
-      hour: "2-digit",
-      hour12: false
-    }).format(now)
-  );
-
-  const todayKsa = getKsaDateKey(now);
-
-  return hourKsa >= 17 && (!payload || payload.ksaDateKey !== todayKsa);
+  return true;
 }
 
 export async function fetchYahooPrice(yahooSymbol) {
@@ -118,23 +103,17 @@ export async function updateAllPrices() {
     }
   }
 
-  const payload = {
-    status: "محدث يوميًا الساعة 5 مساءً بتوقيت السعودية",
+  return {
+    status: "محدث من الخادم عند الطلب، والجدولة اليومية مفعلة الساعة 5 مساءً بتوقيت السعودية",
     lastUpdatedKSA: getKsaTimestamp(),
     ksaDateKey: getKsaDateKey(),
-    source: "Yahoo Finance via Netlify Scheduled Function",
+    source: "Yahoo Finance via Netlify Function",
     officialVerificationNote: "تداول السعودية هو المرجع الرسمي للتحقق من الأسعار والبيانات.",
     prices,
     errors
   };
-
-  const store = getStore(STORE_NAME);
-  await store.setJSON(PRICE_KEY, payload);
-
-  return payload;
 }
 
 export async function getStoredPrices() {
-  const store = getStore(STORE_NAME);
-  return await store.get(PRICE_KEY, { type: "json" });
+  return null;
 }
