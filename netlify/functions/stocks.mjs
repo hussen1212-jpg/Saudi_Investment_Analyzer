@@ -1,0 +1,22 @@
+export const STOCKS = [
+  { companyName: "أرامكو السعودية", tadawulSymbol: "2222", yahooSymbol: "2222.SR", investingUrl: "https://sa.investing.com/equities/saudi-aramco" },
+  { companyName: "مصرف الراجحي", tadawulSymbol: "1120", yahooSymbol: "1120.SR", investingUrl: "https://sa.investing.com/equities/al-rajhi-bank" },
+  { companyName: "مصرف الإنماء", tadawulSymbol: "1150", yahooSymbol: "1150.SR", investingUrl: "https://sa.investing.com/equities/al-inma-bank" },
+  { companyName: "STC", tadawulSymbol: "7010", yahooSymbol: "7010.SR", investingUrl: "https://sa.investing.com/equities/saudi-telecom" },
+  { companyName: "تداول السعودية", tadawulSymbol: "1111", yahooSymbol: "1111.SR", investingUrl: "https://sa.investing.com/equities/saudi-tadawul" },
+  { companyName: "جرير", tadawulSymbol: "4190", yahooSymbol: "4190.SR", investingUrl: "https://sa.investing.com/equities/jarir-marketing" },
+  { companyName: "دله الصحية", tadawulSymbol: "4004", yahooSymbol: "4004.SR", investingUrl: "https://sa.investing.com/equities/dallah-healthcare" },
+  { companyName: "المواساة", tadawulSymbol: "4002", yahooSymbol: "4002.SR", investingUrl: "https://sa.investing.com/equities/mouwasat-medical-services" },
+  { companyName: "بوبا العربية", tadawulSymbol: "8210", yahooSymbol: "8210.SR", investingUrl: "https://sa.investing.com/equities/bupa-arabia" },
+  { companyName: "التعاونية", tadawulSymbol: "8010", yahooSymbol: "8010.SR", investingUrl: "https://sa.investing.com/equities/tawuniya" },
+  { companyName: "أسمنت السعودية", tadawulSymbol: "3030", yahooSymbol: "3030.SR", investingUrl: "https://sa.investing.com/equities/saudi-cement" },
+  { companyName: "أسمنت القصيم", tadawulSymbol: "3040", yahooSymbol: "3040.SR", investingUrl: "https://sa.investing.com/equities/qassim-cement" },
+  { companyName: "سابك للمغذيات الزراعية", tadawulSymbol: "2020", yahooSymbol: "2020.SR", investingUrl: "https://sa.investing.com/equities/sabic-agri-nutrients" },
+  { companyName: "ينساب", tadawulSymbol: "2290", yahooSymbol: "2290.SR", investingUrl: "https://sa.investing.com/equities/yanbu-national-petrochemical" },
+  { companyName: "لوبريف", tadawulSymbol: "2223", yahooSymbol: "2223.SR", investingUrl: "https://sa.investing.com/equities/luberef" },
+  { companyName: "إكسترا", tadawulSymbol: "4003", yahooSymbol: "4003.SR", investingUrl: "https://sa.investing.com/equities/united-electronics" },
+  { companyName: "المراكز العربية / سينومي سنترز", tadawulSymbol: "4321", yahooSymbol: "4321.SR", investingUrl: "https://sa.investing.com/equities/arabian-centres" },
+  { companyName: "سليمان الحبيب", tadawulSymbol: "4013", yahooSymbol: "4013.SR", investingUrl: "https://sa.investing.com/equities/dr-sulaiman-al-habib-medical" },
+  { companyName: "سابك", tadawulSymbol: "2010", yahooSymbol: "2010.SR", investingUrl: "https://sa.investing.com/equities/saudi-basic-industries" },
+  { companyName: "معادن", tadawulSymbol: "1211", yahooSymbol: "1211.SR", investingUrl: "https://sa.investing.com/equities/saudi-arabian-mining" }
+];
