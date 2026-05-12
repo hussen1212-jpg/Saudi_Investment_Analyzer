@@ -6,13 +6,14 @@ const PRICE_KEY = "latest-prices";
 const TIME_ZONE = "Asia/Riyadh";
 
 export function jsonResponse(body, status = 200) {
-  return new Response(JSON.stringify(body), {
-    status,
+  return {
+    statusCode: status,
     headers: {
       "content-type": "application/json; charset=utf-8",
       "cache-control": "no-store"
-    }
-  });
+    },
+    body: JSON.stringify(body)
+  };
 }
 
 export function getKsaDateKey(date = new Date()) {
