@@ -1,6 +1,6 @@
 import { updateAllPrices, jsonResponse } from "./shared.mjs";
 
-export default async () => {
+export const handler = async () => {
   try {
     const payload = await updateAllPrices();
 
